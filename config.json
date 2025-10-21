@@ -1,0 +1,6 @@
+{
+    "num_threads": 4,
+    "max_number": 1000,
+    "print_mode": "immediate",
+    "division_scheme": "range"
+}

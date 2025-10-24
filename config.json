@@ -1,6 +1,6 @@
 {
-    "num_threads": 4,
-    "max_number": 1000,
-    "print_mode": "immediate",
-    "division_scheme": "range"
+    "num_threads": 8,
+    "max_number": "2^16",
+    "print_mode": "wait",
+    "division_scheme": "divisibility"
 }

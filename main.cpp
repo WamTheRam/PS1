@@ -1,7 +1,3 @@
-// main.cpp
-// Entry point for the multi-threaded prime number finder
-// Handles user interaction and configuration with input validation
-
 #include "PrimeFinder.h"
 #include <iostream>
 #include <string>
@@ -22,7 +18,7 @@ int main() {
     
     std::string choice;
     while (true) {
-        std::cout << "Do you want to configure settings? (yes/no): ";
+        std::cout << "Do you want to configure settings? (y/n): ";
         std::cin >> choice;
         
         // Convert to lowercase for case-insensitive comparison

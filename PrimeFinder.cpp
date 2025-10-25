@@ -108,12 +108,6 @@ void PrimeFinder::addPrime(int number) {
 // Each thread searches a contiguous range of numbers
 // Example: For 1-1000 with 4 threads: [1-250], [251-500], [501-750], [751-1000]
 void PrimeFinder::searchRange(int threadId, int start, int end) {
-    // FEATURE: Print thread checking status for wait mode
-    if (config.print_mode == "wait") {
-        std::lock_guard<std::mutex> lock(print_mutex);
-        std::cout << "Thread " << threadId << " is checking range " << start << " to " << end << "...\n";
-    }
-    
     for (int num = start; num <= end; num++) {
         if (isPrime(num)) {
             // FEATURE: Immediate print mode
@@ -182,12 +176,6 @@ bool PrimeFinder::isPrimeParallel(int number) {
 
 // Search using parallel divisibility testing
 void PrimeFinder::searchWithDivisibilityThreads(int threadId, int start, int end) {
-    // FEATURE: Print thread checking status for wait mode
-    if (config.print_mode == "wait") {
-        std::lock_guard<std::mutex> lock(print_mutex);
-        std::cout << "Thread " << threadId << " is checking range " << start << " to " << end << "...\n";
-    }
-    
     for (int num = start; num <= end; num++) {
         if (isPrimeParallel(num)) {
             if (config.print_mode == "immediate") {
